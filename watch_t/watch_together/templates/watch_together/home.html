@@ -1,0 +1,28 @@
+{% extends 'watch_together/base.html' %}
+
+{% block content %}
+    <h2>Find Friends</h2>
+    <form action="#" method="post">
+        {% csrf_token %}
+        <input type="text" name="search_user" placeholder="Enter username to find a friend">
+        <button type="submit">Search</button>
+    </form>
+
+    <hr>
+
+    <h2>Friend Requests</h2>
+    <ul>
+        {% comment %}
+            This is a placeholder. You'll loop through a list of friend requests here.
+            Example:
+            {% for request in friend_requests %}
+                <li>{{ request.from_user.username }}
+                    <button>Accept</button>
+                    <button>Decline</button>
+                </li>
+            {% endfor %}
+        {% endcomment %}
+        <li>There are no pending friend requests.</li>
+    </ul>
+
+{% endblock content %}

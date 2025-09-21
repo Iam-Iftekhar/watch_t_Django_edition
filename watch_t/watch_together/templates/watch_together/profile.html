@@ -1,0 +1,28 @@
+{% extends 'watch_together/base.html' %}
+
+{% block content %}
+    <h2>Profile</h2>
+
+    <div style="border: 1px solid #ccc; padding: 20px; text-align: center;">
+        <img src="#" alt="Profile Picture" style="width: 150px; height: 150px; border-radius: 50%;">
+        <br>
+        <button>Edit Profile Picture</button>
+        <h3>{{ user.username }}</h3>
+        <button>Edit Profile</button>
+    </div>
+
+    <hr>
+
+    <h2>Friends List</h2>
+    <ul>
+        {% comment %}
+            This is a placeholder. You'll loop through the user's friends here.
+            Example:
+            {% for friend in friends %}
+                <li>{{ friend.username }}</li>
+            {% endfor %}
+        {% endcomment %}
+        <li>You have no friends yet.</li>
+    </ul>
+
+{% endblock content %}
